@@ -21,11 +21,13 @@
 
 <a href='https://github.com/caseyweb/QUEEN-CHARITY/fork' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/Fork This Repo-black?style=for-the-badge&logo=git&logoColor=white'/></a>
 
-### 2. GET SESSION ID HERE
- 
-<a href="https://caseypair2-0555af62d9a2.herokuapp.com"><img src="https://img.shields.io/badge/QR CODE-green" alt="Click Here to Get QR-Code" width="90"></a>
 
 
+1.𝐆𝐄𝐓 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐈𝐃 𝐅𝐑𝐎𝐌 𝐒𝐄𝐑𝐕𝐄𝐑
+
+
+  <a href="https://rhodespair-1303049c463e.herokuapp.com"><img title="GET-SESSION ID HERE" src="https://img.shields.io/badge/GET-SESSION ID HERE-h?color=green&style=for-the-badge&logo=nike" width="230" height="38.45"/></a></p>  
+  
 ### DEPLOY ON RENDER
 
 1. If you don't have an account in RENDER, create one and deploy.
