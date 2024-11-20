@@ -36,6 +36,11 @@
 
 
 
+ ### ✧✧ Follow this Tutorial for QUEEN_CHARITY free and safe Deployment
+
+  <a href="https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi" /><br>
+
+     
 ### DEPLOY ON HEROKU
 
 1. If you don't have an account in Heroku, create one.
