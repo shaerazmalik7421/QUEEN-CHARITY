@@ -82,7 +82,7 @@ smd({
     }
     let _0x44d3dd = _0x3febcd.split("|");
     let _0x47c982 = _0x44d3dd[0]?.trim() !== "" ? _0x44d3dd[0] : _0x471740.pushName;
-    let _0x20f704 = _0x44d3dd[1] && _0x44d3dd[1] !== "" ? _0x44d3dd[1] : "Lørd ãBby";
+    let _0x20f704 = _0x44d3dd[1] && _0x44d3dd[1] !== "" ? _0x44d3dd[1] : "king Haki";
     let _0x3ab776 = await _0xad98fb.download();
     let _0x3d0871 = {
       pack: _0x47c982,
@@ -595,4 +595,107 @@ smd({
   const {
     webp2mp4File: _0x3e4a6e
   } = require("../lib");
-  let _0x4ab6cb = asta_mp4?.mi
+  let _0x4ab6cb = asta_mp4?.mimetype || "";
+  if (asta_mp4?.mtype != "videoMessage" && !/webp/.test(_0x4ab6cb)) {
+    return await m.send("*Damn... Reply To An Animated Sticker or Gif *");
+  }
+  let _0x1c3111 = await m.bot.downloadAndSaveMediaMessage(asta_mp4);
+  try {
+    try {
+      if (/webp/.test(_0x4ab6cb)) {
+        let _0x49adc0 = await _0x3e4a6e(_0x1c3111);
+        _0x1c3111 = _0x49adc0.result;
+      }
+    } catch (_0x1b8bba) {
+      console.log("error while converting sticker to mp4\n", _0x1b8bba);
+    }
+    await m.bot.sendMessage(m.jid, {
+      video: {
+        url: _0x1c3111
+      },
+      caption: Config.caption
+    });
+    try {
+      await fs.unlink(_0x1c3111);
+    } catch (_0x399a5b) {}
+  } catch (_0x3d8403) {
+    m.error(_0x3d8403 + "\n\ncmdName: tomp4", _0x3d8403);
+  }
+});
+function splitTextIntoLines(_0x2e8ff3, _0x1ba8fb, _0x469f3c) {
+  const _0x32429f = _0x2e8ff3.split(" ");
+  const _0x2048c1 = [];
+  let _0x38142d = "";
+  for (const _0x1678b3 of _0x32429f) {
+    const _0x56be5a = _0x38142d === "" ? _0x1678b3 : _0x38142d + " " + _0x1678b3;
+    const _0x1a1a76 = _0x1ba8fb.measureText(_0x56be5a).width;
+    if (_0x1a1a76 <= _0x469f3c) {
+      _0x38142d = _0x56be5a;
+    } else {
+      _0x2048c1.push(_0x38142d);
+      _0x38142d = _0x1678b3;
+    }
+  }
+  if (_0x38142d !== "") {
+    _0x2048c1.push(_0x38142d);
+  }
+  return _0x2048c1;
+}
+smd({
+  cmdname: "ttp",
+  alias: ["roundstic", "roundsticker"],
+  info: "Makes sticker of replied image/video.",
+  type: "sticker",
+  filename: __filename,
+  use: "<reply to image.>"
+}, async (_0x54e3dc, _0x8cd246) => {
+  try {
+    let _0x2cee76 = _0x8cd246 || _0x54e3dc.reply_text;
+    if (_0x2cee76) {
+      let _0x374825 = parseInt(_0x2cee76) || "";
+      if (_0x374825 && !isNaN(_0x374825)) {
+        _0x2cee76 = await fancytext("" + _0x2cee76.slice(2), _0x374825);
+      }
+      const {
+        createCanvas: _0x238289
+      } = require("canvas");
+      const _0xf38745 = require("fs");
+      const _0x4d4dd9 = 300;
+      const _0x3fed71 = 300;
+      const _0x5a2b18 = "./temp/ttp.png";
+      const _0x246894 = _0x238289(_0x4d4dd9, _0x3fed71);
+      const _0x330082 = _0x246894.getContext("2d");
+      _0x330082.clearRect(0, 0, _0x246894.width, _0x246894.height);
+      _0x330082.font = "20px Arial";
+      _0x330082.fillStyle = "black";
+      _0x330082.textAlign = "center";
+      const _0xa2e118 = _0x4d4dd9 - 20;
+      const _0x17cad6 = splitTextIntoLines(_0x2cee76, _0x330082, _0xa2e118);
+      const _0x4f37f9 = _0x17cad6.length * 25;
+      const _0x136ece = (_0x3fed71 - _0x4f37f9) / 2;
+      _0x17cad6.forEach((_0x214ee7, _0x432ccc) => {
+        const _0x5c8f67 = _0x136ece + _0x432ccc * 25;
+        _0x330082.fillText(_0x214ee7, _0x4d4dd9 / 2, _0x5c8f67);
+      });
+      const _0x3a6f98 = _0x246894.createPNGStream();
+      const _0x3c15d9 = _0xf38745.createWriteStream(_0x5a2b18);
+      _0x3a6f98.pipe(_0x3c15d9);
+      _0x3c15d9.on("finish", async () => {
+        console.log("Image created:", _0x5a2b18);
+        let _0x3dac0f = _0xf38745.readFileSync(_0x5a2b18);
+        let _0x27923e = {
+          pack: Config.packname,
+          author: Config.author,
+          type: StickerTypes.ROUNDED,
+          quality: 50
+        };
+        await generateSticker(_0x54e3dc, _0x3dac0f, _0x27923e);
+        return _0x3dac0f = false;
+      });
+    } else {
+      return _0x54e3dc.reply("*_Uhh Dear, provide text, ex .ttp 4 hii im QUEEN_ALYA!!_*");
+    }
+  } catch (_0x72e5d) {
+    return await _0x54e3dc.error(_0x72e5d + "\n\ncmdName: ttp\n");
+  }
+});
