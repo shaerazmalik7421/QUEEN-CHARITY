@@ -126,7 +126,7 @@ events.on("message", async (msg) => {
 
     if (botSettings && botSettings.antibug && user.permit !== "true") {
       await msg.block(); // Block the user
-      await msg.reply(`*Maria Blocked the user for sending ${messageCount[userId].length} messages in a short amount of time (1 second).*`);
+      await msg.reply(`*NIKKA Blocked the user for sending ${messageCount[userId].length} messages in a short amount of time (1 second).*`);
 
       // Clear the message count for the user after blocking
       delete messageCount[userId];
