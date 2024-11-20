@@ -1030,7 +1030,7 @@ async function sendWelcome(_0x1e1e67, _0x1036fe) {
   const participant = _0x1e1e67.mentionedJid || _0x1e1e67.participant;
   
   // Welcome message with user mention
-  const welcomeMessage = `Welcome to the group @${participant.split("@")[0]} my friend, make sure you read description ❤️🌹`;
+  const welcomeMessage = `Welcome to the group @${participant.split("@")[0]} my nigha, make sure you read description ❤️🌹`;
   
   // Sending the welcome message with the tagged user
   await _0x1e1e67.send(welcomeMessage, {
@@ -1134,7 +1134,7 @@ async function sendGoodbye(_0x1e1e67, _0x1036fe) {
   const participant = _0x1e1e67.mentionedJid || _0x1e1e67.participant;
   
   // Goodbye message with user mention
-  const goodbyeMessage = `Goodbye @${participant.split("@")[0]}, we'll miss you my friend! Stay safe ❤️🌹`;
+  const goodbyeMessage = `Goodbye @${participant.split("@")[0]}, we'll miss you my nigha! Stay safe ❤️🌹`;
   
   // Sending the goodbye message with the tagged user
   await _0x1e1e67.send(goodbyeMessage, {
