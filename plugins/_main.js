@@ -403,7 +403,7 @@ smd({
       if (_0x2dfb59.length < 3) {
         return;
       }
-      if (_0x2acf30.reply_text.includes("𝐐𝐔𝐄𝐄𝐍_𝐂𝐇𝐀𝐑𝐈𝐓𝐘 • ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[0].includes("Queen_Alya • ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[2].includes("Msg_Id")) {
+      if (_0x2acf30.reply_text.includes("𝐐𝐔𝐄𝐄𝐍_𝐂𝐇𝐀𝐑𝐈𝐓𝐘• ᴀɴɴᴏɴʏᴍᴍsɢ") && _0x2dfb59[0].includes("QUEEN-CHARITY• ᴀɴɴᴏɴʏᴍᴏᴜs ᴍsɢ") && _0x2dfb59[2].includes("Msg_Id")) {
         let _0x1b0d01 = "" + _0x2dfb59[2].replace("*Msg_Id:* ", "").trim();
         let _0x2ecd2a = astro_patch_AnonyMsg[_0x1b0d01];
         if (!_0x2ecd2a) {
