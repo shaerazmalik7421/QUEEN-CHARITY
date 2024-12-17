@@ -90,7 +90,7 @@ npm start
 
 ## ᴡʜᴀᴛsᴀᴘᴘ ᴄʜᴀɴɴᴇʟ
 <a href="https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E" target="_blank">
-    <img alt="whatsapp Group" src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+    <img alt="whatsapp channel" src="https://img.shields.io/badge/ Whatsapp Support Channel -25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
 </p>
 
