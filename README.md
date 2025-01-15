@@ -54,6 +54,22 @@
     <br>
     <a href='https://replit.com/github//caseyweb/QUEEN-CHARITY' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Deploy-red?style=for-the-badge&logo=replit&logoColor=white'/></a>
 
+--------
+
+### DEPLOY ON CODESPACE
+
+<a href='https://github.com/codespaces/new' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/CODESPACE-h?color=navy&style=for-the-badge&logo=visualstudiocode'/></a></p>
+
+
+--------
+
+--------
+
+
+
+
+
+
 ### `COMMANDS FOR TERMUX/UBUNTU`
 ```bash
 apt update && apt upgrade -y
