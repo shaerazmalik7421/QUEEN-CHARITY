@@ -949,8 +949,6 @@ smd(
       if (!_0x1e1e67.isAdmin && !_0x1e1e67.isCreator) {
         return _0x1e1e67.reply(tlang().admin);
       }
-      
-      // Welcome command logic for enabling/disabling
       let _0x2154d6 = _0x1036fe.toLowerCase().trim();
       let _0x558208 =
         (await groupdb.findOne({
@@ -1003,8 +1001,6 @@ smd(
         );
         return await _0x1e1e67.send("*Welcome message disabled!!*");
       }
-      
-      // Setting the welcome message
       await groupdb.updateOne(
         {
           id: _0x1e1e67.chat,
@@ -1014,133 +1010,97 @@ smd(
           welcome: "true",
         }
       );
-      
-      // Send a customized welcome message with user tag
       await sendWelcome(_0x1e1e67, _0x1036fe);
-      
     } catch (_0x582cfc) {
       _0x1e1e67.error(_0x582cfc + "\n\ncommand: setwelcome", _0x582cfc);
     }
   }
 );
-
-// Function to send the actual welcome message
-async function sendWelcome(_0x1e1e67, _0x1036fe) {
-  // Retrieve the participant's contact or username
-  const participant = _0x1e1e67.mentionedJid || _0x1e1e67.participant;
-  
-  // Welcome message with user mention
-  const welcomeMessage = `Welcome to the group @${participant.split("@")[0]} my nigha, make sure you read description ❤️🌹`;
-  
-  // Sending the welcome message with the tagged user
-  await _0x1e1e67.send(welcomeMessage, {
-    mentions: [participant],
-  });
-}
 smd(
   {
     pattern: "goodbye",
-    alias: ["setgoodbye"],
+    alias: ["setgoodbye", "setbye"],
     desc: "sets goodbye message in specific group.",
     category: "group",
     filename: __filename,
   },
-  async (_0x1e1e67, _0x1036fe) => {
+  async (_0x2c1a56, _0x5dedfc) => {
     try {
-      if (!_0x1e1e67.isGroup) {
-        return _0x1e1e67.reply(tlang().group);
+      if (!_0x2c1a56.isGroup) {
+        return _0x2c1a56.reply(tlang().group);
       }
-      if (!_0x1e1e67.isAdmin && !_0x1e1e67.isCreator) {
-        return _0x1e1e67.reply(tlang().admin);
+      if (!_0x2c1a56.isAdmin && !_0x2c1a56.isCreator) {
+        return _0x2c1a56.reply(tlang().admin);
       }
-      
-      // Goodbye command logic for enabling/disabling
-      let _0x2154d6 = _0x1036fe.toLowerCase().trim();
-      let _0x558208 =
+      let _0x604587 = _0x5dedfc.toLowerCase().trim();
+      let _0xbcf3ee =
         (await groupdb.findOne({
-          id: _0x1e1e67.chat,
+          id: _0x2c1a56.chat,
         })) ||
         (await groupdb.new({
-          id: _0x1e1e67.chat,
+          id: _0x2c1a56.chat,
         }));
-      if (_0x2154d6 === "on" || _0x2154d6 === "act" || _0x2154d6 === "enable") {
-        if (_0x558208.goodbye === "true") {
-          return await _0x1e1e67.send(
+      if (_0x604587 === "on" || _0x604587 === "act" || _0x604587 === "enable") {
+        if (_0xbcf3ee.goodbye === "true") {
+          return await _0x2c1a56.send(
             "*_Goodbye already enabled in current group!!_*"
           );
         }
         await groupdb.updateOne(
           {
-            id: _0x1e1e67.chat,
+            id: _0x2c1a56.chat,
           },
           {
             goodbye: "true",
           }
         );
-        return await _0x1e1e67.send("*Goodbye successfully enabled!!*");
+        return await _0x2c1a56.send("*Goodbye successfully enabled!!*");
       }
-      if (_0x558208.goodbye !== "true") {
-        return await _0x1e1e67.send(
+      if (_0xbcf3ee.goodbye !== "true") {
+        return await _0x2c1a56.send(
           "*_Goodbye *Disabled in this Group!_* \n*_Use on/off to enable/disable goodbye_*"
         );
       }
-      if (!_0x1036fe || _0x2154d6 === "get") {
-        return await _0x1e1e67.reply("*Goodbye :* " + _0x558208.goodbyetext);
+      if (!_0x5dedfc || _0x604587 === "get") {
+        return await _0x2c1a56.reply(
+          "*Goodbye Message :* " + _0xbcf3ee.goodbyetext
+        );
       }
       if (
-        _0x2154d6 === "off" ||
-        _0x2154d6 === "deact" ||
-        _0x2154d6 === "disable"
+        _0x604587 === "off" ||
+        _0x604587 === "deact" ||
+        _0x604587 === "disable"
       ) {
-        if (_0x558208.goodbye === "false") {
-          return await _0x1e1e67.send(
+        if (_0xbcf3ee.goodbye === "false") {
+          return await _0x2c1a56.send(
             "*_Goodbye already disabled in current group!!_*"
           );
         }
         await groupdb.updateOne(
           {
-            id: _0x1e1e67.chat,
+            id: _0x2c1a56.chat,
           },
           {
             goodbye: "false",
           }
         );
-        return await _0x1e1e67.send("*Goodbye message disabled!!*");
+        return await _0x2c1a56.send("*Goodbye message disabled!!*");
       }
-      
-      // Setting the goodbye message
       await groupdb.updateOne(
         {
-          id: _0x1e1e67.chat,
+          id: _0x2c1a56.chat,
         },
         {
-          goodbyetext: _0x1036fe,
+          goodbyetext: _0x5dedfc,
           goodbye: "true",
         }
       );
-      
-      // Send a customized goodbye message with user tag
-      await sendGoodbye(_0x1e1e67, _0x1036fe);
-      
-    } catch (_0x582cfc) {
-      _0x1e1e67.error(_0x582cfc + "\n\ncommand: setgoodbye", _0x582cfc);
+      await sendWelcome(_0x2c1a56, _0x5dedfc);
+    } catch (_0x5dd573) {
+      _0x2c1a56.error(_0x5dd573 + "\n\ncommand: setgoodbye", _0x5dd573);
     }
   }
 );
-
-// Function to send the actual goodbye message
-async function sendGoodbye(_0x1e1e67, _0x1036fe) {
-  // Retrieve the participant's contact or username
-  const participant = _0x1e1e67.mentionedJid || _0x1e1e67.participant;
-  
-  // Goodbye message with user mention
-  const goodbyeMessage = `Goodbye @${participant.split("@")[0]}, we'll miss you my nigha! Stay safe ❤️🌹`;
-  
-  // Sending the goodbye message with the tagged user
-  await _0x1e1e67.send(goodbyeMessage, {
-    mentions: [participant],
-  });
-}
 smd(
   {
     pattern: "onlyadmin",
