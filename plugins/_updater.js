@@ -10,7 +10,7 @@ try {
       await git.fetch();
       const commits = await git.log(["main..origin/main"]);
       if (commits.total === 0) {
-        return `${Config.botname} IS ON IT'S LATEST VERSION SO NO UPDATES FOR NOW`;
+        return `${Config.botname} IS ON IT'S LATEST VERSION`;
       } else {
         console.log("Update Detected, trying to update your bot!");
         const app = await heroku.get(`/apps/${process.env.HEROKU_APP_NAME}`);
@@ -37,7 +37,7 @@ try {
       desc: "Shows repo's refreshed commits.",
       category: "tools",
       fromMe: true,
-      react: "🍂",
+      react: "✅",
       filename: __filename,
       use: process.env.HEROKU_API_KEY ? "[ start ]" : "",
     },
@@ -46,12 +46,12 @@ try {
         let commits = await DB.syncgit();
         if (commits.total === 0)
           return await citel.reply(
-            `*QUEEN-CHARITY IS RUNNING ON LATEST\nPATCHES\nFIXES\UPGRADES*`
+            `*QUEEN_CHARITY IS RUNNING ON LATEST\nPATCHES\nFIXES\UPGRADES*`
           );
         let update = await DB.sync();
         await citel.bot.sendMessage(
           citel.chat,
-          { text: update.replace(/SuhailTechIMd/, " CASEYRHODES") },
+          { text: update.replace(/SuhailTechIMd/, " Alex tv") },
           { quoted: citel }
         );
         if (
