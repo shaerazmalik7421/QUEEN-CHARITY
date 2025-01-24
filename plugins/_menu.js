@@ -18,7 +18,7 @@ async function sendAnimeBackgroundAudio(context, fileName) {
       const audio = fs.readFileSync(filePath);  // Read the audio file
       const messageOptions = {
         audio: audio, 
-        mimetype: 'audio/mpeg'
+        mimetype: 'audio/mp3'
       };
       // Send audio message using the correct sendMessage function
       await context.sendMessage(context.chat, messageOptions);
@@ -55,7 +55,7 @@ function getNextMenuDesign() {
     {
       header: "【 *{botname}* 】\n",
       lineSeparator: "┃ ",
-      commandPrefix: "🍀 ",
+      commandPrefix: "💫 ",
       footer: "━━━━━━━━━━━━━",
       emoji: "🎌",
       greetingText: "Explore the enchanting commands below!",
@@ -80,7 +80,10 @@ astro_patch.smd({
   'filename': __filename
 }, async (context, message) => {
   try {
-    // Display the menu first
+    // Play soft background audio first
+    await sendAnimeBackgroundAudio(context, 'alya.mp3');
+
+    // Then display the menu
     const { commands } = require("../lib");
     const currentTime = new Date();
     const hours = currentTime.getHours();
@@ -89,9 +92,9 @@ astro_patch.smd({
 
     // Anime-style greetings based on time of day
     if (hours >= 5 && hours < 12) {
-      greeting = "🏙 *Good Morning* 🏙 - Time for a fresh start!";
+      greeting = "🌸 *Good Morning* 🌸 - Time for a fresh start!";
     } else if (hours >= 12 && hours < 18) {
-      greeting = "🌅 *Good Afternoon* 🌅 - Keep up the great work!";
+      greeting = "🌞 *Good Afternoon* 🌞 - Keep up the great work!";
     } else if (hours >= 18 && hours < 22) {
       greeting = "🌆 *Good Evening* 🌆 - Unwind and relax!";
     } else {
@@ -122,7 +125,7 @@ astro_patch.smd({
     menuContent += `${lineSeparator}🕒 *Uptime:* ${runtime(process.uptime())}\n`;
     menuContent += `${lineSeparator}💻 *RAM Usage:* ${formatp(os.totalmem() - os.freemem())}\n`;
     menuContent += `${lineSeparator}📅 *Date:* ${currentDate}\n`;
-    menuContent += `${lineSeparator}📊 *Total Commands:* ${978}\n`;
+    menuContent += `${lineSeparator}📊 *Total Commands:* ${commands.length}\n`;
     menuContent += `${lineSeparator}${greeting}\n\n`;
 
     // List commands by category in an organized manner
@@ -134,7 +137,7 @@ astro_patch.smd({
     }
 
     menuContent += `${footer}\n\n${design.emoji} *${Config.botname}* - Your assistant\n`;
-    menuContent += `©2024 *CASEYRHODES TECH*\n${readmore}`;
+    menuContent += `©2025 *CASEYRHODES*\n${readmore}`;
 
     // Send the menu with a "forwarded" tag
     const menuOptions = {
@@ -144,7 +147,7 @@ astro_patch.smd({
         'isForwarded': true,
         'externalAdReply': {
           'title': 'QUEEN_CHARITY',
-          'sourceUrl': 'https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E'
+          'sourceUrl': 'https://whatsapp.com/channel/0029VaeW5Tw4yltQOYIO5E2D'
         }
       },
       'ephemeralExpiration': 3000
@@ -152,9 +155,6 @@ astro_patch.smd({
 
     // Send the menu
     await context.sendUi(context.chat, menuOptions, context);
-
-    // Play soft background audio after sending the menu
-    await sendAnimeBackgroundAudio(context, 'Emmy.mp3');
 
   } catch (error) {
     await context.error(`Error: ${error.message}`, error);
