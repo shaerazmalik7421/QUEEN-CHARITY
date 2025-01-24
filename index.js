@@ -1,16 +1,16 @@
-const bot = require(__dirname + "/lib/amd");
-const {
-  VERSION
-} = require(__dirname + "/config");
+const bot = require(__dirname + '/lib/amd')
+const { VERSION } = require(__dirname + '/config')
+
 const start = async () => {
-  Debug.info("Starting QUEEN_CHARITY " + VERSION);
+    Debug.info(`INSTALLING QUEEN_CHARITY...`)
   try {
-    await bot.init();
-    await bot.DATABASE.sync();
-    await bot.connect();
-  } catch (_0x11dc77) {
-    Debug.error(_0x11dc77);
+    await bot.init()
+    //bot.logger.info('⏳ Database syncing!')
+    await bot.DATABASE.sync()
+    await bot.connect()
+  } catch (error) {
+    Debug.error(error);
     start();
   }
-};
+}
 start();
