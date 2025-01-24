@@ -43,6 +43,13 @@
 
   <a href="https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi" /><br>
 
+### DEPLOY ON REPLIT
+1. Deploy.
+    <br>
+    <a href='https://replit.com/github//caseyweb/QUEEN-CHARITY' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Deploy-red?style=for-the-badge&logo=replit&logoColor=white'/></a>
+
+--------
+
 
   
 ### DEPLOY ON RENDER
