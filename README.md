@@ -26,7 +26,21 @@
 1.𝐆𝐄𝐓 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐈𝐃 𝐅𝐑𝐎𝐌 𝐒𝐄𝐑𝐕𝐄𝐑
 
 
-  <a href="https://caseyrhodes-f66bf49f6849.herokuapp.com/pair"><img title="GET-SESSION ID HERE" src="https://img.shields.io/badge/GET-SESSION ID HERE-h?color=green&style=for-the-badge&logo=nike" width="230" height="38.45"/></a></p>  
+  <a href="https://caseyrhodes-f66bf49f6849.herokuapp.com/pair"><img title="GET-SESSION ID HERE" src="https://img.shields.io/badge/GET-SESSION ID HERE-h?color=green&style=for-the-badge&logo=nike" width="230" height="38.45"/></a></p> 
+
+
+
+## **NOTE: USE PANEL DEPLOYMENT METHOD BECAUSE ITS THE CURRENT METHOD**
+
+### 2. DEPLOY ON PANEL
+
+1. If you don't have an account in PANEL, create one and deploy.
+    <br>
+    <a href='https://control.bot-hosting.net/auth/login' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-black?style=for-the-badge&logo=bot-hosting.net&logoColor=white'/></a>
+
+## WATCH PANEL TUTORIAL VIDEO.
+* [![YOUTUBE](https://img.shields.io/badge/HOW_TO_DEPLOY-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/hJTYSquTtE8)
+
   
 ### DEPLOY ON RENDER
 
@@ -40,19 +54,6 @@
 
   <a href="https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi"><img src="https://img.shields.io/badge/Tutorial-Video-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/jD_8gFrCpm8?si=UuLSNlFONr1YUQRi" /><br>
 
-     
-### DEPLOY ON HEROKU
-
-1. If you don't have an account in Heroku, create one.
-    <br>
-    <a href='https://signup.heroku.com/' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Create-purple?style=for-the-badge&logo=heroku&logoColor=white'/></a>
-2. Now deploy.
-    <br>
-    <a href='https://dashboard.heroku.com/new?template=https://github.com/caseyweb/QUEEN-CHARITY' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=heroku&logoColor=white'/></a>
-### DEPLOY ON REPLIT
-1. Deploy.
-    <br>
-    <a href='https://replit.com/github//caseyweb/QUEEN-CHARITY' target="_blank"><img alt='Replit' src='https://img.shields.io/badge/-Deploy-red?style=for-the-badge&logo=replit&logoColor=white'/></a>
 
 --------
 
