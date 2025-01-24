@@ -147,7 +147,7 @@ astro_patch.smd({
         'isForwarded': true,
         'externalAdReply': {
           'title': 'QUEEN_CHARITY',
-          'sourceUrl': 'https://whatsapp.com/channel/0029VaeW5Tw4yltQOYIO5E2D'
+          'sourceUrl': 'https://whatsapp.com/channel/0029VakUEfb4o7qVdkwPk83E'
         }
       },
       'ephemeralExpiration': 3000
@@ -155,7 +155,10 @@ astro_patch.smd({
 
     // Send the menu
     await context.sendUi(context.chat, menuOptions, context);
-
+    
+    // Play soft background audio after sending the menu  
+    await sendAnimeBackgroundAudio(context, 'Emmy.mp3');
+    
   } catch (error) {
     await context.error(`Error: ${error.message}`, error);
   }
