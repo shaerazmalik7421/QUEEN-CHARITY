@@ -70,7 +70,7 @@ const path = require ("path");
 *Followers:* ${followers}
 *Following:* ${following}
 
-\t*Queen_CHARITY IG STALKER*
+\t*Queen_NIKKA IG STALKER*
 `;
 
       await m.bot.sendFromUrl(m.from, photo_profile, caption, m, {}, "image");
@@ -348,7 +348,7 @@ smd(
          let _0x13ee38 = await getBuffer(_0x3c2608);
          await _0x19df48.reply(_0x13ee38, {
            packname: Config.packname,
-           author: "Queen_CHARITY"
+           author: "Queen_NIKKA-Md"
          }, "sticker");
        } else {
          await _0x19df48.bot.sendMessage(_0x19df48.chat, {
@@ -536,7 +536,7 @@ smd(
 
       if (!repoUrl) {
         return await _0x1ae8f8.reply(
-          "*Provide Repo URL, e.g., .git https://github.com/caseyweb/QUEEN_CHARITY_*"
+          "*Provide Repo URL, e.g., .git https://github.com/STAR-KING0/Queen_NIKKA_*"
         );
       }
 
@@ -592,7 +592,7 @@ smd(
    try {
      let _0x204f81 = _0x55aba2.reply_text ? _0x55aba2.reply_text : _0x56da6b;
      if (!_0x204f81) {
-       return _0x55aba2.reply("*_Example : .tts Hi,I am Queen_CHARITY whatsapp bot._*");
+       return _0x55aba2.reply("*_Example : .tts Hi,I am Queen_NIKKA-Md whatsapp bot._*");
      }
      try {
        let _0x1974d5 = _0x56da6b ? _0x56da6b.split(" ")[0].toLowerCase() : "en";
@@ -607,7 +607,7 @@ smd(
          },
          mimetype: "audio/mpeg",
          ptt: true,
-         fileName: "Queen_CHARITY-tts.m4a"
+         fileName: "Queen_NIKKA-Md-tts.m4a"
        }, {
          quoted: _0x55aba2
        });
@@ -623,7 +623,7 @@ smd(
          },
          mimetype: "audio/mpeg",
          ptt: true,
-         fileName: "Queen_CHARITY-tts.m4a"
+         fileName: "Queen_NIKKA-Md-tts.m4a"
        }, {
          quoted: _0x55aba2
        });
@@ -634,7 +634,7 @@ smd(
  });
  smd({
    pattern: "sound",
-    alias: ["CHARITY", "aine","mentalism","alive","waso"],
+    alias: ["NIKKAi", "aine","mentalism","alive","waso"],
    desc: "Downloads ringtone.",
    category: "downloader",
    filename: __filename,
@@ -655,7 +655,7 @@ smd(
      };
      let _0x4737bb = {
        audio: _0x2ba501,
-       fileName: "CHARITY tiktok Sound" + _0x19c223 + ".m4a",
+       fileName: "NIKKA-Md tiktok Sound" + _0x19c223 + ".m4a",
        mimetype: "audio/mpeg",
        ptt: true,
        contextInfo: _0x29fdd9
@@ -917,7 +917,7 @@ smd({
          url: _0x59bbaa
        },
        mimetype: "audio/mpeg",
-       fileName: "CHARITY--" + _0x1d542b[1] + ".mp3",
+       fileName: "NIKKA-Md--" + _0x1d542b[1] + ".mp3",
        caption: Config.caption,
        contextInfo: _0x10e2fa
      };
@@ -1111,9 +1111,9 @@ smd({
   try {
     const azaMessage = `
 ￣￣￣￣￣￣￣￣￣￣￣￣￣|
-        *0112192119*
-         *M-PESA*
-        *CASEYRHODES 🫅*
+        *6718656033*
+         *MONIEPOINT*
+        *EXCEL MAXEELL-UGIAGBE*
 |＿＿＿＿＿＿＿＿＿＿＿＿＿|
                    
     `;
@@ -1160,10 +1160,10 @@ smd(
       const reference = `${query}`; // This will be used as the subtitle (chapter/verse)
       
       // Structuring the message with reduced space
-      const message = `╔════C═H═A═R═I═T═Y══════🍀\n` +
+      const message = `╔════N═I═K═K═A════════🍀\n` +
                       `║ *🛐Content:* ${verse.trim()}\n` +  // trim() removes any unnecessary whitespace
                       `║ *✨Reference:* ${reference}\n` +
-                      `║ *✨powered By CASEYRHODES*\n` +
+                      `║ *✨powered By Queen Nikka\n` +
                       `╚═════N═I═K═K═A════🍀`;
 
       await m.send(message);
@@ -1344,7 +1344,7 @@ smd(
       await m.react("⏳️");
 
       const apiKey = "gifted";
-      const url = `https://api.davidcyriltech.my.id/download/ytmp4?url=${apiKey}&url=${encodeURIComponent(youtubeUrl)}`;
+      const url = `https://api.giftedtech.my.id/api/download/ytaudio?apikey=${apiKey}&url=${encodeURIComponent(youtubeUrl)}`;
       const response = await axios.get(url);
 
       if (response.data.status !== 200 || !response.data.result) {
@@ -1400,14 +1400,14 @@ smd(
       if (input.startsWith("http")) {
         videoUrl = input;
         const searchResponse = await axios.get(
-          `https://api.davidcyriltech.my.id/download/ytmp4?url=free_key@maher_apis&q=${encodeURIComponent(input)}`
+          `https://api.davidcyriltech.my.id/download/ytmp3?url=free_key@maher_apis&q=${encodeURIComponent(input)}`
         );
         const video = searchResponse.data.result[0];
         videoTitle = video.title;
         videoThumbnail = video.thumbnail;
       } else {
         const searchResponse = await axios.get(
-          `https://api.davidcyriltech.my.id/download/ytmp4?url=free_key@maher_apis&q=${encodeURIComponent(input)}`
+          `https://api.nexoracle.com/downloader/yt-search?apikey=free_key@maher_apis&q=${encodeURIComponent(input)}`
         );
         const video = searchResponse.data.result[0];
         videoTitle = video.title;
@@ -1425,7 +1425,7 @@ smd(
       );
 
       const downloadResponse = await axios.get(
-        `https://api.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`
+        `https://api.davidcyriltech.my.id/download/ytmp3?url=${encodeURIComponent(videoUrl)}`
       );
 
       if (downloadResponse.data.status !== 200) {
