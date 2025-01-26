@@ -348,7 +348,7 @@ smd(
          let _0x13ee38 = await getBuffer(_0x3c2608);
          await _0x19df48.reply(_0x13ee38, {
            packname: Config.packname,
-           author: "Queen_MARIA-Md"
+           author: "Queen_CHARITY"
          }, "sticker");
        } else {
          await _0x19df48.bot.sendMessage(_0x19df48.chat, {
@@ -587,12 +587,12 @@ smd(
    desc: "text to speech.",
    category: "downloader",
    filename: __filename,
-   use: "<Hii,this is CHARITY>"
+   use: "<Hii,this is NIKKA>"
  }, async (_0x55aba2, _0x56da6b) => {
    try {
      let _0x204f81 = _0x55aba2.reply_text ? _0x55aba2.reply_text : _0x56da6b;
      if (!_0x204f81) {
-       return _0x55aba2.reply("*_Example : .tts Hi,I am Queen-charity-Md whatsapp bot._*");
+       return _0x55aba2.reply("*_Example : .tts Hi,I am Queen_CHARITY whatsapp bot._*");
      }
      try {
        let _0x1974d5 = _0x56da6b ? _0x56da6b.split(" ")[0].toLowerCase() : "en";
@@ -607,7 +607,7 @@ smd(
          },
          mimetype: "audio/mpeg",
          ptt: true,
-         fileName: "Queen-charity-Md-tts.m4a"
+         fileName: "Queen_CHARITY-tts.m4a"
        }, {
          quoted: _0x55aba2
        });
@@ -623,7 +623,7 @@ smd(
          },
          mimetype: "audio/mpeg",
          ptt: true,
-         fileName: "Queen-charity-Md-tts.m4a"
+         fileName: "Queen_CHARITY-tts.m4a"
        }, {
          quoted: _0x55aba2
        });
@@ -634,7 +634,7 @@ smd(
  });
  smd({
    pattern: "sound",
-    alias: ["Charityi", "aine","mentalism","alive","waso"],
+    alias: ["CHARITY", "aine","mentalism","alive","waso"],
    desc: "Downloads ringtone.",
    category: "downloader",
    filename: __filename,
@@ -655,7 +655,7 @@ smd(
      };
      let _0x4737bb = {
        audio: _0x2ba501,
-       fileName: "Charity-Md tiktok Sound" + _0x19c223 + ".m4a",
+       fileName: "CHARITY tiktok Sound" + _0x19c223 + ".m4a",
        mimetype: "audio/mpeg",
        ptt: true,
        contextInfo: _0x29fdd9
@@ -886,7 +886,7 @@ smd({
      try {
        let _0x32b31a = await ytdl.getInfo(_0x1d542b[0]);
        _0x43c5ac = _0x32b31a.videoDetails.title;
-       let _0x4b47c3 = "./temp/MARIA-Md " + _0x1d542b[1] + ".mp3";
+       let _0x4b47c3 = "./temp/NIKKA-Md " + _0x1d542b[1] + ".mp3";
        const _0x212389 = ytdl(_0x1d542b[0], {
          filter: _0xd2371a => _0xd2371a.audioBitrate == 160 || _0xd2371a.audioBitrate == 128
        }).pipe(fs.createWriteStream(_0x4b47c3));
@@ -917,7 +917,7 @@ smd({
          url: _0x59bbaa
        },
        mimetype: "audio/mpeg",
-       fileName: "NIKKA-Md--" + _0x1d542b[1] + ".mp3",
+       fileName: "CHARITY--" + _0x1d542b[1] + ".mp3",
        caption: Config.caption,
        contextInfo: _0x10e2fa
      };
@@ -1107,23 +1107,24 @@ smd({
   desc: "Displays account information",
   category: "info",
   filename: __filename,
-}, async (message) => {
+}, async (m) => {
   try {
     const azaMessage = `
 ￣￣￣￣￣￣￣￣￣￣￣￣￣|
-        *254112192119*
+        *0112192119*
          *M-PESA*
-        *PALVIN KIBET*
+        *CASEYRHODES 🫅*
 |＿＿＿＿＿＿＿＿＿＿＿＿＿|
-                     \•◡•)/
-                       \\     / 
-                        ——
-                        |     |
-                        |_   |_
+                   
     `;
 
-    // Use the message.send method directly for the bot to send the message
-    await message.reply(azaMessage);
+    // Use the method to send the image with the caption
+    await m.send(
+      "https://d.uguu.se/aEVUlhuR.jpg", // Image URL
+      { caption: azaMessage }, // Caption with account info
+      "img", // Type of message
+      m // Reference to the original message
+    );
 
   } catch (err) {
     console.error("Error while sending aza message:", err);
@@ -1159,15 +1160,294 @@ smd(
       const reference = `${query}`; // This will be used as the subtitle (chapter/verse)
       
       // Structuring the message with reduced space
-      const message = `╔════C═H═A═R═I═T═Y══════☘️\n` +
+      const message = `╔════C═H═A═R═I═T═Y══════🍀\n` +
                       `║ *🛐Content:* ${verse.trim()}\n` +  // trim() removes any unnecessary whitespace
-                      `║ *👉Reference:* ${reference}\n` +
-                      `║ *👉powered By CASEYRHODES\n` +
-                      `╚══C═A═S═E═Y═R═H═O═D═E═S═☘️`;
+                      `║ *✨Reference:* ${reference}\n` +
+                      `║ *✨powered By CASEYRHODES*\n` +
+                      `╚═════N═I═K═K═A════🍀`;
 
       await m.send(message);
     } catch (e) {
       await m.error(`${e}\n\ncommand: bible`, e);
+    }
+  }
+);
+
+/*
+smd({
+  pattern: "pindl2",
+  alias: ["pinterestimg"],
+  desc: "Downloads an image from a Pinterest link.",
+  category: "downloader",
+  use: "<Pinterest URL>"
+}, async (message, match) => {
+  try {
+    if (!match) {
+      return await message.reply("*_Please provide a valid Pinterest link_*");
+    }
+
+    // Replace with the new API URL for Pinterest download
+    const apiUrl = `https://haki-api2.onrender.com/api/download/pinterest?url=${encodeURIComponent(match)}`;
+
+    // API request to fetch the Pinterest image using the new API
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+
+    // Check if the API call was successful and contains the image URL
+    if (data.success && data.imageUrl) {
+      const imageUrl = data.imageUrl; // Get the image URL from the new API
+
+      // Fetch the image as a buffer
+      const imageBuffer = await axios({
+        url: imageUrl,
+        method: 'GET',
+        responseType: 'arraybuffer'
+      });
+
+      const image = Buffer.from(imageBuffer.data, 'binary'); // Convert binary data to a buffer
+
+      // Send the image as a picture message
+      await message.bot.sendMessage(message.jid, {
+        image: image,
+        caption: `*Pinterest Image Downloaded Successfully*\n\n_Link: ${match}_`
+      });
+    } else {
+      await message.reply("*_Error: Could not fetch the image. Please check the link and try again._*");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    await message.reply("*_Error: Failed to download the image. Please try again later!_*");
+  }
+});
+
+
+
+const axios = require("axios");
+smd({
+  pattern: "pindl4",
+  alias: ["pinterestimg"],
+  desc: "Downloads an image from a Pinterest link.",
+  category: "downloader",
+  use: "<Pinterest URL>"
+}, async (message, match) => {
+  try {
+    if (!match) {
+      return await message.reply("*_Please provide a valid Pinterest link_*");
+    }
+
+    // API request to fetch the Pinterest image using the new API
+    const apiUrl = `https://haki-api2.onrender.com/api/download/pinterest?url=${encodeURIComponent(match)}`;
+    
+    // Logging the API URL for debugging purposes
+    console.log(`Requesting Pinterest download from API: ${apiUrl}`);
+
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+
+    // Logging the full API response for debugging
+    console.log("API Response:", data);
+
+    // Check if the API call was successful and contains the image URL
+    if (data.success && data.imageUrl) {
+      const imageUrl = data.imageUrl; // Get the image URL from the API
+
+      // Fetch the image as a buffer
+      const imageBuffer = await axios({
+        url: imageUrl,
+        method: 'GET',
+        responseType: 'arraybuffer'
+      });
+
+      const image = Buffer.from(imageBuffer.data, 'binary'); // Convert binary data to a buffer
+
+      // Send the image as a picture message
+      await message.bot.sendMessage(message.jid, {
+        image: image,
+        caption: `*Pinterest Image Downloaded Successfully*\n\n_Link: ${match}_`
+      });
+    } else {
+      // Log API response details when the request fails
+      console.log(`Error: API did not return success. Response:`, data);
+      await message.reply("*_Error: Could not fetch the image. Please check the link and try again._*");
+    }
+  } catch (error) {
+    // Log the exact error details
+    console.error("Error:", error);
+
+    // Send error response with a more descriptive message
+    await message.reply(`*_Error: Failed to download the image. Please try again later!_*\n\n_Error details: ${error.message}_`);
+  }
+});
+
+
+smd({
+  pattern: "pindl5",
+  alias: ["pinterestimg"],
+  desc: "Downloads an image from a Pinterest link.",
+  category: "downloader",
+  use: "<Pinterest URL>"
+}, async (_0x2c2023, _0x4ec99f) => {
+  try {
+    if (!_0x4ec99f) {
+      return await _0x2c2023.reply("*_Please provide a valid Pinterest link_*");
+    }
+
+    // Correct API request to fetch the Pinterest image
+    const apiUrl = `https://haki-api2.onrender.com/pinterest?url=${encodeURIComponent(_0x4ec99f)}`;
+
+    const response = await axios.get(apiUrl);
+    const data = response.data;
+
+    // Check if the API call was successful and contains the image URL
+    if (data.success && data.result && data.result.image) {
+      const imageUrl = data.result.image[0]; // Get the first image URL
+
+      // Fetch the image as a buffer
+      const imageBuffer = await axios({
+        url: imageUrl,
+        method: 'GET',
+        responseType: 'arraybuffer'
+      });
+
+      const image = Buffer.from(imageBuffer.data, 'binary'); // Convert binary data to a buffer
+
+      // Send the image as a picture message
+      await _0x2c2023.bot.sendMessage(_0x2c2023.jid, {
+        image: image,
+        caption: `*Pinterest Image Downloaded Successfully*\n\n_Link: ${_0x4ec99f}_`
+      });
+    } else {
+      await _0x2c2023.reply("*_Error: Could not fetch the image. Please check the link and try again._*");
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    await _0x2c2023.reply("*_Error: Failed to download the image. Please try again later!_*");
+  }
+}); */
+
+
+
+smd(
+  {
+    pattern: "ytmp3",
+    desc: "Download MP3 from YouTube",
+    category: "download",
+    filename: __filename,
+  },
+  async (m, query) => {
+    try {
+      const youtubeUrl = query || (m.quoted && m.quoted.text);
+      if (!youtubeUrl) {
+        return await m.reply("Please provide a valid YouTube URL.");
+      }
+
+      await m.react("⏳️");
+
+      const apiKey = "gifted";
+      const url = `https://api.davidcyriltech.my.id/download/ytmp4?url=${apiKey}&url=${encodeURIComponent(youtubeUrl)}`;
+      const response = await axios.get(url);
+
+      if (response.data.status !== 200 || !response.data.result) {
+        return await m.reply("Failed to fetch audio details. Please try again.");
+      }
+
+      const { title, thumbnail, download_url: audioUrl } = response.data.result;
+
+      if (!audioUrl) {
+        return await m.reply("Failed to retrieve the audio file. Please try again.");
+      }
+
+      await m.bot.sendMessage(m.jid, {
+        image: { url: thumbnail },
+        caption: `*Title:* ${title}\n\n*Preparing audio...*`,
+      });
+
+      await m.bot.sendMessage(m.jid, {
+        audio: {
+          url: audioUrl,
+        },
+        mimetype: "audio/mpeg",
+        ptt: false,
+      });
+
+      await m.react("✅️");
+    } catch (e) {
+      console.error("Error in ytmp3 command:", e);
+      await m.reply("An error occurred while processing your request. Please try again.");
+    }
+  }
+);
+
+smd(
+  {
+    pattern: "play",
+    desc: "Search and play a song using YouTube",
+    category: "music",
+    filename: __filename,
+  },
+  async (m, query) => {
+    try {
+      const input = query || m.quoted?.text;
+
+      if (!input) {
+        return await m.reply("Please provide a song name or keyword to search.");
+      }
+
+      await m.react("⏳️");
+
+      let videoTitle, videoUrl, videoThumbnail;
+
+      if (input.startsWith("http")) {
+        videoUrl = input;
+        const searchResponse = await axios.get(
+          `https://api.davidcyriltech.my.id/download/ytmp4?url=free_key@maher_apis&q=${encodeURIComponent(input)}`
+        );
+        const video = searchResponse.data.result[0];
+        videoTitle = video.title;
+        videoThumbnail = video.thumbnail;
+      } else {
+        const searchResponse = await axios.get(
+          `https://api.davidcyriltech.my.id/download/ytmp4?url=free_key@maher_apis&q=${encodeURIComponent(input)}`
+        );
+        const video = searchResponse.data.result[0];
+        videoTitle = video.title;
+        videoUrl = video.url;
+        videoThumbnail = video.thumbnail;
+      }
+
+      await m.bot.sendMessage(
+        m.jid,
+        {
+          image: { url: videoThumbnail },
+          caption: `Downloading *${videoTitle}*...`,
+        },
+        { quoted: m }
+      );
+
+      const downloadResponse = await axios.get(
+        `https://api.davidcyriltech.my.id/download/ytmp4?url=${encodeURIComponent(videoUrl)}`
+      );
+
+      if (downloadResponse.data.status !== 200) {
+        return await m.reply("Failed to download the song. Please try again.");
+      }
+
+      const audioUrl = downloadResponse.data.result.download_url;
+
+      await m.bot.sendMessage(
+        m.jid,
+        {
+          audio: { url: audioUrl },
+          mimetype: "audio/mp4",
+          ptt: false,
+        },
+        { quoted: m }
+      );
+
+      await m.react("✅️");
+    } catch (e) {
+      console.error("Error in play command:", e);
+      await m.reply("An error occurred while processing your request. Please try again.");
     }
   }
 );
